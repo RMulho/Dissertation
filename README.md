@@ -1,7 +1,9 @@
 Introduction
 ============
 
-This is the coding documentation for my MSci Statistics with Work Placement Dissertation 'Investigating river water quality in England'. It looks at loading in the two datasets of monitoring station data annual and monthly. It will visualise the two datasets geographically then split into two analyses for each of the datasets. The annual data will be modelled in a spatiotemporal model, with LOD's being accounted for. The monthly dataset will be modelled using Functional Data Analysis (FDA).
+This is the coding documentation for my MSci Statistics with Work Placement Dissertation 'Investigating river water quality in England'. In this report, the water quality of river networks across England will be explored through recorded phosphorus data. This aims to evaluate whether there is a relationship with phosphorus and the surrounding characteristics of the area around the monitoring stations. It will also investigate whether there exists any spatial patterns of phosphorus, and how this changes over time. With more informative data, the overall temporal pattern of phosphorus and dominant modes of variations will be examined. This will also identify any trends and seasonality this pollutant exhibits. The analysis will provide a deeper understanding of this pollutant and will highlight areas of potential risk.
+
+The code will look at loading in the annual and monthly datasets of the monitoring stations. It will visualise the two datasets geographically then split into two analyses for each of the datasets. The annual data will be modelled in a spatiotemporal model, with LOD's being accounted for. The monthly dataset will be modelled using Functional Data Analysis (FDA).
 
 1 - Setting up
 ==============
@@ -19,7 +21,7 @@ require("zoo")
 require("fda")
 ```
 
-Load in the library 'ggmap' from github using the devtools package
+Load in the library 'ggmap' from github using the devtools package.
 
 ``` r
 if(!requireNamespace("devtools")) install.packages("devtools")
@@ -60,7 +62,7 @@ View(TRPdata)
 summary(TRPdata)
 ```
 
-Give each unique monitoring station in the 'Annual Dataset' a location number
+Give each unique monitoring station in the 'Annual Dataset' a location number.
 
 ``` r
 # Assign each x co-ordinate a unique number (in this case all x co-ordinates were unique)
